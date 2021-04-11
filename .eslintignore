@@ -1,0 +1,8 @@
+# .gitignore file generated with love by Mhirba
+
+.yarn
+.eslintrc.js
+.babelrc.js
+.prettierrc.js
+.lintstagedrc.js
+.pnp.cjs

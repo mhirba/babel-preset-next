@@ -1,0 +1,46 @@
+## .gitignore generated with love by Mhirba
+
+#
+# PACKAGE MANAGER
+#
+
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+## depending of Zero-install or not ⬇️
+.pnp.*
+
+## Modules dependencies if nodeLinket set to node modules
+node_modules/
+
+#
+# TESTING
+#
+
+## Coverage
+coverage/
+
+#
+# LOGS
+#
+
+*.log
+logs/
+
+#
+# MISCELLANEOUS
+#
+
+## Generated
+.dist/
+
+## Integrated development editor
+.idea/
+.vscode/
+
+## Operating system
+.DS_Store  

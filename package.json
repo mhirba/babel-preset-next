@@ -1,0 +1,63 @@
+{
+  "name": "@mhirba/babel-preset-next",
+  "version": "1.0.0",
+  "license": "JAM",
+  "author": "Majdi Toumi <majdi@mhirba.com> (https://mhirba.com)",
+  "description": "Mhirba's babel preset for next features",
+  "keywords": [
+    "mhirba",
+    "config",
+    "typescript",
+    "babel"
+  ],
+  "main": ".babelrc.js",
+  "engines": {
+    "node": ">=14.16.0",
+    "yarn": ">=2.4.0"
+  },
+  "scripts": {
+    "test": "yarn test:check && yarn test:format && yarn build",
+    "test:check": "yarn tsc",
+    "test:format": "yarn eslint --ext .ts tests",
+    "build": "yarn babel --extensions '.ts' --source-maps inline tests --out-dir .dist/",
+    "deploy": "yarn pinst --disable ; yarn npm publish ; yarn pinst --enable",
+    "postinstall": "yarn husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/mhirba/babel-preset-next.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": "*",
+    "prettier": "*",
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-proposal-do-expressions": "^7.12.13",
+    "@babel/plugin-proposal-numeric-separator": "^7.12.13",
+    "@babel/plugin-proposal-partial-application": "^7.12.13",
+    "@babel/plugin-proposal-pipeline-operator": "^7.12.13",
+    "@babel/plugin-syntax-top-level-await": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-typescript": "^7.13.0",
+    "@mhirba/eslint-config-base": "^1.0.1",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@yarnpkg/pnpify": "^2.4.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jest": "^24.3.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "husky": "^6.0.0",
+    "pinst": "^2.1.6",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.3"
+  }
+}

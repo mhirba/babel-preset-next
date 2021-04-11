@@ -1,0 +1,27 @@
+name: Publishing
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    name: Interstellar
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '15.x'
+          registry-url: https://npm.pkg.github.com
+          scope: '@mhirba'
+      - run: yarn install
+        env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - run: yarn test
+        env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - run: yarn deploy
+        env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
