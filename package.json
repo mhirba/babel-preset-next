@@ -1,6 +1,6 @@
 {
   "name": "@mhirba/babel-preset-next",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "JAM",
   "author": "Majdi Toumi <majdi@mhirba.com> (https://mhirba.com)",
   "description": "Mhirba's babel preset for next features",
@@ -39,14 +39,6 @@
   "devDependencies": {
     "@babel/cli": "^7.13.14",
     "@babel/core": "^7.13.14",
-    "@babel/plugin-proposal-do-expressions": "^7.12.13",
-    "@babel/plugin-proposal-numeric-separator": "^7.12.13",
-    "@babel/plugin-proposal-partial-application": "^7.12.13",
-    "@babel/plugin-proposal-pipeline-operator": "^7.12.13",
-    "@babel/plugin-syntax-top-level-await": "^7.12.13",
-    "@babel/plugin-transform-runtime": "^7.13.10",
-    "@babel/preset-env": "^7.13.12",
-    "@babel/preset-typescript": "^7.13.0",
     "@mhirba/eslint-config-base": "^1.0.1",
     "@types/node": "^14.14.37",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
@@ -59,5 +51,15 @@
     "pinst": "^2.1.6",
     "prettier": "^2.2.1",
     "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-do-expressions": "^7.12.13",
+    "@babel/plugin-proposal-numeric-separator": "^7.12.13",
+    "@babel/plugin-proposal-partial-application": "^7.12.13",
+    "@babel/plugin-proposal-pipeline-operator": "^7.12.13",
+    "@babel/plugin-syntax-top-level-await": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-typescript": "^7.13.0"
   }
 }
